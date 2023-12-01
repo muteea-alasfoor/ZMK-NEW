@@ -16,6 +16,11 @@
             bindings = <&mo 3>;
             key-positions = <36 24>;
         };
+
+        funchtion {
+            bindings = <&tog 4>;
+            key-positions = <36 25>;
+        };
     };
 
     keymap {
@@ -82,6 +87,15 @@
 &trans     &trans  &trans  &trans    &trans  &trans       &trans     &trans  &trans  &trans   &trans   &trans
                            &kp LALT  &trans  &kp SPACE    &kp ENTER  &trans  &trans
             >;
+        };
+    };
+
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        Flayer {
+            if-layers = <0>;
+            then-layer = <4>;
         };
     };
 };
